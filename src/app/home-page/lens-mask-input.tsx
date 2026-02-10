@@ -41,7 +41,7 @@ export function LensMaskInput({
 					{...props}
 				/>
 			) : (
-				<p className="text-lg text-muted-foreground h-16 grid place-items-center">
+				<p className="w-full h-48 border-dashed border-4 text-lg text-muted-foreground grid place-items-center">
 					No image selected
 				</p>
 			)}
@@ -103,6 +103,7 @@ function LensMaskInputInner({
 									radiusAjusterCenterY.set(centerY.get());
 								},
 							})}
+							step="any"
 						/>
 						<Input
 							icon={<MoveHorizontal />}
@@ -117,6 +118,7 @@ function LensMaskInputInner({
 									radiusAjusterCenterX.set(radiusAjusterCenterX.get() + deltaX);
 								},
 							})}
+							step="any"
 						/>
 						<Input
 							icon={<MoveVertical />}
@@ -131,6 +133,7 @@ function LensMaskInputInner({
 									radiusAjusterCenterY.set(radiusAjusterCenterY.get() + deltaY);
 								},
 							})}
+							step="any"
 						/>
 					</div>
 				</TooltipTrigger>
